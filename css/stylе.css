@@ -330,70 +330,77 @@ body {
   text-align: center;
 }
 
-.slider-js {
-  padding-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.slider__swiper {
+  padding: 50px 0 0 0;
 }
 
-.slider-js-inner {
-  overflow: hidden;
-  min-width: 950px;
+.slider__swiper--wrapper{
+  margin: 0 auto;
+  max-width: 950px;
   height: 600px;
   background: #414141;
   border-radius: 29px;
   box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
 }
 
-.slider-info {
-  width: 490px;
-  text-align: center;
-}
-
-.images {
-  width: 100%;
+.slider__swiper--slide {
   display: flex;
-  transition: all ease-in-out 0.6s;
+  align-items: center;
 }
 
-.images img {
-  border-radius: 29px;
+.slider__swiper--image {
   margin: 50px 50px;
 }
 
-button {
-  margin: 0 50px 0 50px;
-  background: #e2a300;
+.slider__swiper--image img {
+  border-radius: 29px;
+  max-width: 100%;
+}
+.slider__swiper--button__next::after,
+.slider__swiper--button__prev::after {
+ font-size: 0;
+}
+
+.slider__swiper--button__next {
+  left: 50px;
+}
+
+.slider__swiper--button__prev {
+  right: 50px;
+}
+
+.slider__swiper--button__next img,
+.slider__swiper--button__prev img {
+  background-color: #e2a300;
   border-radius: 50%;
   border: none;
-  transition: all 0.4s;
+  transition: all ease-in 5s;
   cursor: pointer;
 }
 
-button:hover {
-  transform: scale(1.2);
+.slider__swiper--button__next:hover,
+.slider__swiper--button__prev:hover  {
+  transform: scale(1.3);
 }
 
-button:focus {
+.slider__swiper--button__next:focus,
+.slider__swiper--button__prev:focus {
   transform: scale(0.9);
 }
 
 .slider-title {
-  max-width: 270px;
-  margin-top: 60px;
+  max-width: 300px;
   font-family: "Arodora Pro";
   font-weight: 300;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 1.5rem;
+  line-height: 1.2;
   color: #ffffff;
   text-align: center;
 }
 
 .slider-description {
-  width: 300px;
+  max-width: 300px;
   padding-top: 25px;
-  margin-right: 60px;
   padding-bottom: 25px;
   text-align: left;
   font-family: "Arodora Pro";
@@ -405,7 +412,6 @@ button:focus {
 
 .slider-link {
   margin-left: 80px;
-  float: left;
   text-decoration: none;
   font-family: "Arodora Pro";
   font-weight: 300;
